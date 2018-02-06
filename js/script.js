@@ -12,28 +12,52 @@ const userColours = {
 // define fortune object with fortunes assigned to each possible color value
 ////////create multiple fortunes for each colour key (a object full of objects?)
 
+
 $(function() {
 
     //Get each input (radio in this case) on the page, and loop through each one
     $('body').find('input').each(function(i, el) {
         //Define a random 1 or 0 within the function
         let randomVal = Math.round(Math.random());
-        //Set each input with the random value
-        $('input').val(randomVal);
-        console.log(el);
+        // //Set each input with the random value
+        $(el).val(randomVal);
+        // console.log(el);
+        console.log(i, el);
     });
 
     //////Assign random string from thoughtfulPrompts array to question1 & question2
 
-    //write function to listen for the user to select one of the three options for question1. Call the addColour function to pass the value into the red: part of the object
+    //when the user selects for question 1, pass the value of the selection into "red" on the userColours object
 
-    $('.question1').on('checked')
+    $('.question1 input').on('change', function(e) {
+        e.preventDefault();
+        console.log(`The content of "red" is ${userColours.red}`);
+        userColours.red = $(this).val();
+        console.log(`The content of "red" is ${userColours.red}`);
+    });
 
-    //write function to listen for the user to select one of the three options for question2. Call the addColour function to pass the value into the green: part of the object
+    //when the user selects for question 2, pass the value of the selection into "green" on the userColours object
 
-    //write function to listen for the user to select one of the three options for question3. Call the addColour function to pass the value into the blue: part of the object
+    $('.question2 input').on('change', function(e) {
+        e.preventDefault();
+        console.log(`The content of "green" is ${userColours.green}`);
+        userColours.green = $(this).val();
+        console.log(`The content of "green" is ${userColours.green}`);
+    });
+
+    //when the user selects for question 3, pass the value of the selection into "blue" on the userColours object
+
+    $('.question3 input').on('change', function(e) {
+        e.preventDefault();
+        console.log(`The content of "blue" is ${userColours.blue}`);
+        userColours.blue = $(this).val();
+        console.log(`The content of "blue" is ${userColours.blue}`);
+    });
 
     //write a function to turn the 'color' object into a string userColor containing only the keys with a value of 1 (or true?)
+
+    let userHue = userColours.tostring();
+    console.log(userHue);
 
     // if the userColor = red || green || blue, done
     // if: red & green & blue = white
