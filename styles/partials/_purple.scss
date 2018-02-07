@@ -1,0 +1,52 @@
+.purple {
+    background: linear-gradient(202deg, #7500fd, #9c7fd7, #f9d304);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    -o-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+    @-webkit-keyframes AnimationName {
+        0% {
+            background-position: 0% 61%
+        }
+        50% {
+            background-position: 100% 40%
+        }
+        100% {
+            background-position: 0% 61%
+        }
+    }
+    @-moz-keyframes AnimationName {
+        0% {
+            background-position: 0% 61%
+        }
+        50% {
+            background-position: 100% 40%
+        }
+        100% {
+            background-position: 0% 61%
+        }
+    }
+    @-o-keyframes AnimationName {
+        0% {
+            background-position: 0% 61%
+        }
+        50% {
+            background-position: 100% 40%
+        }
+        100% {
+            background-position: 0% 61%
+        }
+    }
+    @keyframes AnimationName {
+        0% {
+            background-position: 0% 61%
+        }
+        50% {
+            background-position: 100% 40%
+        }
+        100% {
+            background-position: 0% 61%
+        }
+    }
+}

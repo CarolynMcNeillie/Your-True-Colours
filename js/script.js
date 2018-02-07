@@ -19,35 +19,49 @@ $(function() {
         let randomVal = Math.round(Math.random());
         // //Set each input with the random value
         $(el).val(randomVal);
+        this.checked = false;
     });
 
-    //////Assign random string from thoughtfulPrompts array to question1 & question2
+    //////Assign random string from thoughtfulPrompts array to the three prompts
 
-    //when the user selects for question 1, pass the value of the selection into "red" on the userColours object
+    //when the user selects for selection 1, pass the value of the selection into "red" on the userColours object
 
-    $('.question1 input').on('change', function(e) {
+    let thisID;
+
+    $('.selection1 input').on('change', function(e) {
         e.preventDefault();
-        console.log(`The content of "red" is ${userColours.red}`);
         userColours.red = $(this).val();
-        console.log(`The content of "red" is ${userColours.red}`);
+        let thisID = ((this).id); //gets the id of the selected radio input
+        $(`label[for=${thisID}] span`).toggleClass('fa-circle-o fa-circle');
+        //I need to work out how to tie this to the selected radio though!
     });
+
+    // THIS ONE WORKS BUT DOESN'T ATTACH TO CHECKED
+    // $('label.thisID').on('click', function() {
+    //     console.log('Carolyn, you did a thing!');
+    //     console.log(this);
+    //     let checkBox = $(this).find('.fa');
+    //     checkBox.toggleClass('fa-circle fa-asterisk')
+    // });
 
     //when the user selects for question 2, pass the value of the selection into "green" on the userColours object
 
-    $('.question2 input').on('change', function(e) {
+    $('.selection2 input').on('change', function(e) {
         e.preventDefault();
-        console.log(`The content of "green" is ${userColours.green}`);
         userColours.green = $(this).val();
-        console.log(`The content of "green" is ${userColours.green}`);
+        let thisID = ((this).id); //gets the id of the selected radio input
+        $(`label[for=${thisID}] span`).toggleClass('fa-circle-o fa-circle');
+        //I need to work out how to tie this to the selected radio though!
     });
 
     //when the user selects for question 3, pass the value of the selection into "blue" on the userColours object
 
-    $('.question3 input').on('change', function(e) {
+    $('.selection3 input').on('change', function(e) {
         e.preventDefault();
-        console.log(`The content of "blue" is ${userColours.blue}`);
         userColours.blue = $(this).val();
-        console.log(`The content of "blue" is ${userColours.blue}`);
+        let thisID = ((this).id); //gets the id of the selected radio input
+        $(`label[for=${thisID}] span`).toggleClass('fa-circle-o fa-circle');
+        //I need to work out how to tie this to the selected radio though!
     });
 
     //When the user clicks a button make array UserAuraArray from userColours keys with a value of 1

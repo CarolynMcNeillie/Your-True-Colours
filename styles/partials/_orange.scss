@@ -1,0 +1,52 @@
+.orange {
+    background: linear-gradient(240deg, #fd7200, #ffca44, #c4ece7);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    -o-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+    @-webkit-keyframes AnimationName {
+        0% {
+            background-position: 0% 61%
+        }
+        50% {
+            background-position: 100% 40%
+        }
+        100% {
+            background-position: 0% 61%
+        }
+    }
+    @-moz-keyframes AnimationName {
+        0% {
+            background-position: 0% 61%
+        }
+        50% {
+            background-position: 100% 40%
+        }
+        100% {
+            background-position: 0% 61%
+        }
+    }
+    @-o-keyframes AnimationName {
+        0% {
+            background-position: 0% 61%
+        }
+        50% {
+            background-position: 100% 40%
+        }
+        100% {
+            background-position: 0% 61%
+        }
+    }
+    @keyframes AnimationName {
+        0% {
+            background-position: 0% 61%
+        }
+        50% {
+            background-position: 100% 40%
+        }
+        100% {
+            background-position: 0% 61%
+        }
+    }
+}
