@@ -1,11 +1,11 @@
 const colours = {}
 
 colours.colourMeaning = { //holds values for fortune at end
-    red: `<p>Red is so rad</p>`,
-    orange: `<p>Orange you glad I didn't say banana?`,
-    green: `Green with envy.`,
-    blue: `Don't feel blue.`,
-    turquoise: `So pretty.`,
-    purple: `Purple people eater.`,
-    white: `Like Dove soap.`,
+    red: `<p>Your aura is red.</p>`,
+    orange: `<p>Your aura is orange</p>`,
+    green: `<p>Your aura is green</p>`,
+    blue: `<p>Your aura is blue</p>`,
+    turquoise: `<p>Your aura is turquoise</p>`,
+    purple: `<p>Your aura is purple</p>`,
+    white: `<p>Your aura is white</p>`,
 }
