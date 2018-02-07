@@ -529,6 +529,7 @@ fieldset {
   text-align: center; }
   fieldset p {
     font-size: .5em;
+    line-height: 1.5em;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     width: 100%;
@@ -536,7 +537,8 @@ fieldset {
     text-align: center; }
 
 input[type="radio"] {
-  visibility: hidden; }
+  visibility: hidden;
+  position: absolute; }
 
 input[type="submit"] {
   padding: 10px 30px;
@@ -553,11 +555,17 @@ input[type="submit"] {
     background: rgba(255, 255, 255, 0.01);
     color: #fff; }
 
+.select {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+
 label {
-  width: 30%;
-  margin-bottom: 30px;
-  display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin: 0; }
 
 section {
   visibility: hidden;

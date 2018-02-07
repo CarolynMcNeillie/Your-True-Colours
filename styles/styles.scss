@@ -38,6 +38,7 @@ fieldset {
     text-align: center;
     p {
         font-size: .5em;
+        line-height: 1.5em;
         text-transform: uppercase;
         letter-spacing: 0.1em;
         width: 100%;
@@ -48,6 +49,7 @@ fieldset {
 
 input[type="radio"] {
     visibility: hidden;
+    position: absolute;
 }
 
 input[type="submit"] {
@@ -65,11 +67,15 @@ input[type="submit"] {
     }
 }
 
+.select {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
 label {
-    width: 30%;
-    margin-bottom: 30px;
-    display: block;
     margin: 0 auto;
+    margin: 0;
 }
 
 section {
