@@ -543,22 +543,31 @@ input[type="submit"] {
   border-radius: 2px;
   background: #fff;
   color: #333;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s; }
+  -webkit-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  border: 3px solid white; }
   input[type="submit"]:hover {
     background: rgba(255, 255, 255, 0.01);
-    color: #fff;
-    border: 2px solid white; }
+    color: #fff; }
 
 label {
   width: 30%;
   margin-bottom: 30px; }
 
 section {
-  display: none; }
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  max-width: 80%; }
 
 .current {
+  visibility: visible;
+  opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
