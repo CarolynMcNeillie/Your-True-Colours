@@ -46,7 +46,7 @@ colours.start = function() {
 }
 
 colours.clickNext = function() {
-    $('span').on('click', function() {
+    $('.next').on('click', function() {
         $(thisPrompt).removeClass('current');
         $(thisSelection).addClass('current');
 
