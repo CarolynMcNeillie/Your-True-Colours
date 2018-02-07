@@ -1,13 +1,11 @@
 //////Define thoughtfulPrompts array to hold random thought prompts to the first two user prompts
 
+//This constant will hold values for red, green, and blue when they are passed in by the user
 const userColours = {
     red: '',
     green: '',
     blue: ''
 }
-
-//define object 'colour' to hold values for red, green, and blue as they are passed in
-//write a function addColour I can use in callbacks to push the selected value of 
 
 // define fortune object with fortunes assigned to each possible color value
 ////////create multiple fortunes for each colour key (a object full of objects?)
@@ -16,13 +14,11 @@ const userColours = {
 $(function() {
 
     //Get each input (radio in this case) on the page, and loop through each one
-    $('body').find('input').each(function(i, el) {
+    $('body').find('input[type="radio"]').each(function(i, el) {
         //Define a random 1 or 0 within the function
         let randomVal = Math.round(Math.random());
         // //Set each input with the random value
         $(el).val(randomVal);
-        // console.log(el);
-        console.log(i, el);
     });
 
     //////Assign random string from thoughtfulPrompts array to question1 & question2
@@ -54,10 +50,51 @@ $(function() {
         console.log(`The content of "blue" is ${userColours.blue}`);
     });
 
-    //write a function to turn the 'color' object into a string userColor containing only the keys with a value of 1 (or true?)
+    //When the user clicks a button make array UserAuraArray from userColours keys with a value of 1
 
-    let userHue = userColours.tostring();
-    console.log(userHue);
+    const userAuraArray = []
+    let userAura;
+
+    $('input[type="submit"]').on('click', function() {
+
+        for (let colour in userColours) {
+
+            if (userColours[colour] == 1) {
+                userAuraArray.push(colour);
+            }
+        }
+
+        //Determine the final shade and store it in userAura
+
+        if (userAuraArray.length === 0) {
+            const userAura = "white";
+            console.log(userAura);
+        } else if (userAuraArray.length === 1) {
+            userAura = userAuraArray[0];
+            console.log(userAura);
+        } else if (userAuraArray.length === 3) {
+            userAura = "white";
+            console.log(userAura);
+        } else if (userAuraArray.indexOf("red") > -1 && userAuraArray.indexOf("green") > -1) {
+            userAura = "orange";
+            console.log(userAura);
+        } else if (userAuraArray.indexOf("red") > -1 && userAuraArray.indexOf("blue") > -1) {
+            userAura = "purple";
+            console.log(userAura);
+        } else if (userAuraArray.indexOf("green") > -1 && userAuraArray.indexOf("blue") > -1) {
+            userAura = "turquoise";
+            console.log(userAura);
+        } else {
+            console.log('You\'re going to have to work this out')
+        }
+
+        $('.userAura').html(`<h1>${userAura}</h1>`);
+    });
+
+
+
+
+
 
     // if the userColor = red || green || blue, done
     // if: red & green & blue = white
