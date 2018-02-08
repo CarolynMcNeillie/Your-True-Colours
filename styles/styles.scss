@@ -1,30 +1,47 @@
 @import "partials/setup";
 @import "partials/red";
 @import "partials/orange";
+@import "partials/yellow";
 @import "partials/green";
 @import "partials/turquoise";
 @import "partials/blue";
 @import "partials/purple";
 @import "partials/white";
 body {
-    padding: 100px 20%;
     font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
     background: #333;
+    height: 100vh;
     color: white;
     text-align: center;
     font-weight: 100;
-    font-size: 35px;
     text-shadow: 0px 0px 10px #fff;
-    height: 100vh;
 }
 
 @import "partials/gradiant_black";
 h1 {
-    font-size: 1em;
+    font-size: 30px;
     font-weight: 100;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     display: block;
+    margin: 0;
+    font-size: 20px;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.3em;
+    max-width: 30em;
+}
+
+hr {
+    background: white;
+    width: 50px;
+    margin: 20px;
+    height: 1px;
+    border: 0;
+    box-shadow: 0 0 10px white;
 }
 
 fieldset {
@@ -37,21 +54,24 @@ fieldset {
     margin: 50px;
     text-align: center;
     p {
-        font-size: .5em;
-        line-height: 1.5em;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        width: 100%;
-        margin-bottom: 30px;
         text-align: center;
     }
 }
 
-input[type="radio"] {
-    visibility: hidden;
-    position: absolute;
+.prompt {
+    font-size: 2em;
 }
 
+.selection p {
+    font-size: 0.75em;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+//buttons
 input[type="submit"] {
     padding: 10px 30px;
     font-size: 20px;
@@ -61,21 +81,30 @@ input[type="submit"] {
     color: #333;
     transition: background-color 0.4s;
     border: 3px solid white;
+    margin: 20px;
+    font-size: 1em;
     &:hover {
         background: rgba(255, 255, 255, 0.01);
         color: #fff;
     }
 }
 
-.select {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+//select elements
+input[type="radio"] {
+    visibility: hidden;
+    position: absolute;
 }
 
 label {
     margin: 0 auto;
     margin: 0;
+    font-size: 30px;
+}
+
+.select {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 section {
@@ -89,7 +118,6 @@ section {
 
 .current {
     visibility: visible;
-    opacity: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;

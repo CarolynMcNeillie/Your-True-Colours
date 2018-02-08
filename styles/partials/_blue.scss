@@ -1,52 +1,40 @@
     .blue {
-        background: linear-gradient(178deg, #5444ce, #1e80f2, #1edef2, #eaf5bf);
+        background: linear-gradient(213deg, #251c47, #74aadf, #8fb4b2, #60bdf2);
         background-size: 800% 800%;
-        -webkit-animation: AnimationName 18s ease infinite;
-        -moz-animation: AnimationName 18s ease infinite;
-        -o-animation: AnimationName 18s ease infinite;
-        animation: AnimationName 18s ease infinite;
+        -webkit-animation: AnimationName 10s ease infinite;
+        -moz-animation: AnimationName 10s ease infinite;
+        animation: AnimationName 10s ease infinite;
         @-webkit-keyframes AnimationName {
             0% {
-                background-position: 0% 50%
+                background-position: 0% 88%
             }
             50% {
-                background-position: 100% 50%
+                background-position: 100% 13%
             }
             100% {
-                background-position: 0% 50%
+                background-position: 0% 88%
             }
         }
         @-moz-keyframes AnimationName {
             0% {
-                background-position: 0% 50%
+                background-position: 0% 88%
             }
             50% {
-                background-position: 100% 50%
+                background-position: 100% 13%
             }
             100% {
-                background-position: 0% 50%
-            }
-        }
-        @-o-keyframes AnimationName {
-            0% {
-                background-position: 0% 50%
-            }
-            50% {
-                background-position: 100% 50%
-            }
-            100% {
-                background-position: 0% 50%
+                background-position: 0% 88%
             }
         }
         @keyframes AnimationName {
             0% {
-                background-position: 0% 50%
+                background-position: 0% 88%
             }
             50% {
-                background-position: 100% 50%
+                background-position: 100% 13%
             }
             100% {
-                background-position: 0% 50%
+                background-position: 0% 88%
             }
         }
     }
