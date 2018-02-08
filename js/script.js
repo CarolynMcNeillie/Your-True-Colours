@@ -6,14 +6,28 @@ colours.userColours = { //holds inputs passed in from user
 }
 const userAuraArray = []
 let userAura;
-let thisPrompt = '.firstPrompt';
-let thisSelection = '.firstSelection';
-
-//////Define thoughtfulPrompts array to hold random thought prompts to the first two user prompts
-//////Assign random string from thoughtfulPrompts array to the three prompts
 
 
-////////create multiple fortunes for each colour key (a object full of objects?)
+/////////////////////////////////////////////////
+// this sets variables for the arrows I got rid of
+// let thisPrompt = '.firstPrompt';
+// let thisSelection = '.firstSelection';
+/////////////////////////////////////////////////
+
+
+colours.assignPrompts = function() {
+    for (let i = 1; i < 4; i = i + 1) {
+        console.log(colours.pompts);
+        console.log(colours.prompts.length);
+        let randomVal = Math.round(Math.random() * colours.prompts.length);
+        console.log(randomVal);
+        console.log(colours.prompts[randomVal]);
+        console.log(`prompts${i}`);
+        $((`.prompts${i}`)).text(colours.prompts[randomVal]);
+        colours.prompts.splice([randomVal], 1);
+
+    }
+}
 
 colours.assignRandomValues = function() { //assigns value of 1 or 0 to each select input on page
     $('body').find('input[type="radio"]').each(function(i, el) {
@@ -34,13 +48,16 @@ colours.start = function() {
     });
 }
 
-colours.clickNext = function() {
-    $('.next').on('click', function() {
-        $(thisPrompt).removeClass('current');
-        $(thisSelection).addClass('current');
+/////////////////////////////////////////////////
+//This controls the arrows I got rid of
+// colours.clickNext = function() {
+//     $('.next').on('click', function() {
+//         $(thisPrompt).removeClass('current');
+//         $(thisSelection).addClass('current');
 
-    });
-}
+//     });
+// }
+/////////////////////////////////////////////////
 
 colours.collectUserInputRed = function() {
     $('.selection1 input').on('change', function(e) { //when a toggle is selected
@@ -48,10 +65,11 @@ colours.collectUserInputRed = function() {
         colours.userColours.red = $(this).val(); //sets the value of the colour
         let thisID = ((this).id); //gets the id of the selected radio input
         $(`label[for=${thisID}] span`).toggleClass('fa-circle-o fa-circle'); //changes the toggle icon
+        console.log($(this).val());
         //I need to work out how to tie this to the selected radio though!
-        thisPrompt = '.secondPrompt';
-        thisSelection = '.secondSelection';
-        $('.firstSelection').removeClass('current');
+        // thisPrompt = '.secondPrompt'; // sets the stage for the arrows I got rid off
+        // thisSelection = '.secondSelection'; // sets the stage for the arrows I got rid off
+        $('.firstPrompt').removeClass('current');
         $('.secondPrompt').addClass('current');
     });
 }
@@ -63,9 +81,9 @@ colours.collectUserInputGreen = function() {
         let thisID = ((this).id);
         $(`label[for=${thisID}] span`).toggleClass('fa-circle-o fa-circle');
         console.log($(this).val());
-        thisPrompt = '.thirdPrompt';
-        thisSelection = '.thirdSelection';
-        $('.secondSelection').removeClass('current');
+        // thisPrompt = '.secondPrompt'; // sets the stage for the arrows I got rid off
+        // thisSelection = '.thirdelection'; // sets the stage for the arrows I got rid off
+        $('.secondPrompt').removeClass('current');
         $('.thirdPrompt').addClass('current');
     });
 }
@@ -77,7 +95,7 @@ colours.collectUserInputBlue = function() {
         let thisID = ((this).id);
         $(`label[for=${thisID}] span`).toggleClass('fa-circle-o fa-circle');
         console.log($(this).val());
-        $('.thirdSelection').removeClass('current');
+        $('.thirdPrompt').removeClass('current');
         $('.lastInput').addClass('current');
     });
 }
@@ -96,13 +114,20 @@ colours.clickFinish = function() {
         }
 
         //Determine the final shade and store it in userAura
+        //if none selected = white
+        //if the userColor = red || green || blue, done
+        //if all selected = yellow
+        //if: red & green & blue = white
+        //if red & green = orange
+        //if red & blue = purple
+        //if green & blue = turquoise
 
         if (userAuraArray.length == 0) { //if the array is empty
             userAura = "white";
         } else if (userAuraArray.length === 1) { //if there is only one colour in the array
             userAura = userAuraArray[0];
         } else if (userAuraArray.length === 3) { //if the array is full
-            userAura = "white"; //otherwise, blend!
+            userAura = "yellow"; //otherwise, blend!
         } else if (userAuraArray.indexOf("red") > -1 && userAuraArray.indexOf("green") > -1) {
             userAura = "orange";
         } else if (userAuraArray.indexOf("red") > -1 && userAuraArray.indexOf("blue") > -1) {
@@ -125,7 +150,7 @@ colours.clickFinish = function() {
 colours.init = function() {
     colours.assignRandomValues();
     colours.start();
-    colours.clickNext();
+    colours.assignPrompts();
     colours.collectUserInputRed();
     colours.collectUserInputGreen();
     colours.collectUserInputBlue();
@@ -138,71 +163,6 @@ $(function() {
     colours.init();
 
 
-
-
-
-
-
-    // $('span').on('click', function() {
-    //     $('.firstPrompt').removeClass('current');
-    //     $('.firstSelection').addClass('current');
-
-    // });
-
-
-
-    //when the user selects for selection 1, pass the value of the selection into "red" on the colors.userColours object
-
-    // $('input#finish').on('click', function() {
-
-    //     for (let colour in colors.userColours) {
-
-    //         if (colours.userColours[colour] == 1) {
-    //             userAuraArray.push(colour);
-    //         }
-    //     }
-
-
-
-    // THIS ONE WORKS BUT DOESN'T ATTACH TO CHECKED
-    // $('label.thisID').on('click', function() {
-    //     console.log('Carolyn, you did a thing!');
-    //     console.log(this);
-    //     let checkBox = $(this).find('.fa');
-    //     checkBox.toggleClass('fa-circle fa-asterisk')
-    // });
-
-    //when the user selects for question 2, pass the value of the selection into "green" on the colours.userColours object
-
-
-
-    //when the user selects for question 3, pass the value of the selection into "blue" on the colours.userColours object
-
-    // $('.selection3 input').on('change', function(e) {
-    //     e.preventDefault();
-    //     colours.userColours.blue = $(this).val();
-    //     let thisID = ((this).id); //gets the id of the selected radio input
-    //     $(`label[for=${thisID}] span`).toggleClass('fa-circle-o fa-circle');
-    //     //I need to work out how to tie this to the selected radio though!
-    //     console.log($(this).val());
-    // });
-
-    //When the user clicks a button make array UserAuraArray from colours.userColours keys with a value of 1
-
-
-
-
-
-
-
-
-
-
-    // if the userColor = red || green || blue, done
-    // if: red & green & blue = white
-    //if red & green = yellow
-    //if red & blue = purple
-    //if green & blue = turquoise
 
     // print color to the screen
     // change background colour to gradient corresponding to the aura colour

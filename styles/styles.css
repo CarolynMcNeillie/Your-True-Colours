@@ -530,13 +530,14 @@ fieldset {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 50px;
+  margin: 30px;
   text-align: center; }
   fieldset p {
     text-align: center; }
 
 .prompt {
-  font-size: 2em; }
+  font-size: 30px;
+  max-width: 20em; }
 
 .selection p {
   font-size: 0.75em;
