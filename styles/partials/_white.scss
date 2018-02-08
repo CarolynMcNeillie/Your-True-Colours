@@ -51,3 +51,14 @@
     }
     color: #666;
 }
+
+input[type="submit"],
+a.button {
+    background: #666;
+    color: #fff;
+    border: 3px solid #666;
+    &:hover,
+    a.button {
+        color: #666;
+    }
+}

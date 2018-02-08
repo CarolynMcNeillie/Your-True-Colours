@@ -1,41 +1,52 @@
 .yellow {
-    background: linear-gradient(226deg, #ffcd00, #eff77d, #ffee00, #ffb600);
-    background-size: 800% 800%;
-    -webkit-animation: AnimationName 12s ease infinite;
-    -moz-animation: AnimationName 12s ease infinite;
-    animation: AnimationName 12s ease infinite;
+    background: linear-gradient(36deg, #f0eeaf, #f7cd21, #e1b598, #e2c465, #fff9ae);
+    background-size: 1000% 1000%;
+    -webkit-animation: AnimationName 22s ease infinite;
+    -moz-animation: AnimationName 22s ease infinite;
+    animation: AnimationName 22s ease infinite;
     @-webkit-keyframes AnimationName {
         0% {
-            background-position: 0% 42%
+            background-position: 0% 50%
         }
         50% {
-            background-position: 100% 59%
+            background-position: 100% 50%
         }
         100% {
-            background-position: 0% 42%
+            background-position: 0% 50%
         }
     }
     @-moz-keyframes AnimationName {
         0% {
-            background-position: 0% 42%
+            background-position: 0% 50%
         }
         50% {
-            background-position: 100% 59%
+            background-position: 100% 50%
         }
         100% {
-            background-position: 0% 42%
+            background-position: 0% 50%
         }
     }
     @keyframes AnimationName {
         0% {
-            background-position: 0% 42%
+            background-position: 0% 50%
         }
         50% {
-            background-position: 100% 59%
+            background-position: 100% 50%
         }
         100% {
-            background-position: 0% 42%
+            background-position: 0% 50%
         }
     }
     color: rgb(78, 83, 99);
+}
+
+input[type="submit"],
+a.button {
+    background: #666;
+    color: #fff;
+    border: 3px solid #666;
+    &:hover,
+    a.button {
+        color: #666;
+    }
 }

@@ -17,12 +17,7 @@ let userAura;
 
 colours.assignPrompts = function() {
     for (let i = 1; i < 4; i = i + 1) {
-        console.log(colours.pompts);
-        console.log(colours.prompts.length);
-        let randomVal = Math.round(Math.random() * colours.prompts.length);
-        console.log(randomVal);
-        console.log(colours.prompts[randomVal]);
-        console.log(`prompts${i}`);
+        let randomVal = Math.floor(Math.random() * colours.prompts.length);
         $((`.prompts${i}`)).text(colours.prompts[randomVal]);
         colours.prompts.splice([randomVal], 1);
 
@@ -32,7 +27,8 @@ colours.assignPrompts = function() {
 colours.assignRandomValues = function() { //assigns value of 1 or 0 to each select input on page
     $('body').find('input[type="radio"]').each(function(i, el) {
         //Define a random 1 or 0 within the function
-        let randomVal = Math.round(Math.random());
+        let randomVal = Math.floor(Math.random() * 2);
+        console.log(randomVal);
         // //Set each input with the random value
         $(el).val(randomVal);
         //reset the toggle
@@ -146,7 +142,6 @@ colours.clickFinish = function() {
     });
 }
 
-
 colours.init = function() {
     colours.assignRandomValues();
     colours.start();
@@ -156,6 +151,7 @@ colours.init = function() {
     colours.collectUserInputBlue();
     colours.clickFinish();
 }
+
 
 
 $(function() {

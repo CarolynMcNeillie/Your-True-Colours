@@ -231,38 +231,49 @@ input::-moz-focus-inner {
     background-position: 0% 88%; } }
 
 .yellow {
-  background: -webkit-linear-gradient(224deg, #ffcd00, #eff77d, #ffee00, #ffb600);
-  background: -o-linear-gradient(224deg, #ffcd00, #eff77d, #ffee00, #ffb600);
-  background: linear-gradient(226deg, #ffcd00, #eff77d, #ffee00, #ffb600);
-  background-size: 800% 800%;
-  -webkit-animation: AnimationName 12s ease infinite;
-  -moz-animation: AnimationName 12s ease infinite;
-  animation: AnimationName 12s ease infinite;
+  background: -webkit-linear-gradient(54deg, #f0eeaf, #f7cd21, #e1b598, #e2c465, #fff9ae);
+  background: -o-linear-gradient(54deg, #f0eeaf, #f7cd21, #e1b598, #e2c465, #fff9ae);
+  background: linear-gradient(36deg, #f0eeaf, #f7cd21, #e1b598, #e2c465, #fff9ae);
+  background-size: 1000% 1000%;
+  -webkit-animation: AnimationName 22s ease infinite;
+  -moz-animation: AnimationName 22s ease infinite;
+  animation: AnimationName 22s ease infinite;
   color: #4e5363; }
 
 @-webkit-keyframes AnimationName {
   0% {
-    background-position: 0% 42%; }
+    background-position: 0% 50%; }
   50% {
-    background-position: 100% 59%; }
+    background-position: 100% 50%; }
   100% {
-    background-position: 0% 42%; } }
+    background-position: 0% 50%; } }
 
 @-moz-keyframes AnimationName {
   0% {
-    background-position: 0% 42%; }
+    background-position: 0% 50%; }
   50% {
-    background-position: 100% 59%; }
+    background-position: 100% 50%; }
   100% {
-    background-position: 0% 42%; } }
+    background-position: 0% 50%; } }
 
 @keyframes AnimationName {
   0% {
-    background-position: 0% 42%; }
+    background-position: 0% 50%; }
   50% {
-    background-position: 100% 59%; }
+    background-position: 100% 50%; }
   100% {
-    background-position: 0% 42%; } }
+    background-position: 0% 50%; } }
+
+input[type="submit"],
+a.button {
+  background: #666;
+  color: #fff;
+  border: 3px solid #666; }
+  input[type="submit"]:hover,
+  input[type="submit"] a.button,
+  a.button:hover,
+  a.button a.button {
+    color: #666; }
 
 .green {
   background: -webkit-linear-gradient(237deg, #1c4729, #bedda9, #8fb4a2, #778868);
@@ -448,6 +459,17 @@ input::-moz-focus-inner {
   100% {
     background-position: 0% 61%; } }
 
+input[type="submit"],
+a.button {
+  background: #666;
+  color: #fff;
+  border: 3px solid #666; }
+  input[type="submit"]:hover,
+  input[type="submit"] a.button,
+  a.button:hover,
+  a.button a.button {
+    color: #666; }
+
 body {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 100;
@@ -547,7 +569,8 @@ fieldset {
   width: 100%;
   margin-bottom: 50px; }
 
-input[type="submit"] {
+input[type="submit"],
+a.button {
   padding: 10px 30px;
   font-size: 20px;
   text-transform: uppercase;
@@ -559,10 +582,18 @@ input[type="submit"] {
   transition: background-color 0.4s;
   border: 3px solid white;
   margin: 20px;
-  font-size: 1em; }
-  input[type="submit"]:hover {
+  font-size: 1em;
+  text-decoration: none; }
+  input[type="submit"]:hover,
+  input[type="submit"] a.button,
+  a.button:hover,
+  a.button a.button {
     background: rgba(255, 255, 255, 0.01);
     color: #fff; }
+
+a.button {
+  margin-top: 3000px;
+  font-size: 12px; }
 
 input[type="radio"] {
   visibility: hidden;

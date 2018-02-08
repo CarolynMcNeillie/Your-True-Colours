@@ -73,7 +73,8 @@ fieldset {
 }
 
 //buttons
-input[type="submit"] {
+input[type="submit"],
+a.button {
     padding: 10px 30px;
     font-size: 20px;
     text-transform: uppercase;
@@ -84,10 +85,17 @@ input[type="submit"] {
     border: 3px solid white;
     margin: 20px;
     font-size: 1em;
-    &:hover {
+    text-decoration: none;
+    &:hover,
+    a.button {
         background: rgba(255, 255, 255, 0.01);
         color: #fff;
     }
+}
+
+a.button {
+    margin-top: 3000px;
+    font-size: 12px;
 }
 
 //select elements
