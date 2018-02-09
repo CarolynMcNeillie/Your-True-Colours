@@ -238,7 +238,7 @@ input::-moz-focus-inner {
   -webkit-animation: AnimationName 22s ease infinite;
   -moz-animation: AnimationName 22s ease infinite;
   animation: AnimationName 22s ease infinite;
-  color: #4e5363; }
+  color: #666; }
 
 @-webkit-keyframes AnimationName {
   0% {
@@ -263,17 +263,20 @@ input::-moz-focus-inner {
     background-position: 100% 50%; }
   100% {
     background-position: 0% 50%; } }
-
-input[type="submit"],
-a.button {
-  background: #666;
-  color: #fff;
-  border: 3px solid #666; }
-  input[type="submit"]:hover,
-  input[type="submit"] a.button,
-  a.button:hover,
-  a.button a.button {
-    color: #666; }
+  .yellow input[type="submit"] {
+    background: #666;
+    color: #fff;
+    border: 3px solid #666; }
+    .yellow input[type="submit"]:hover {
+      background: rgba(255, 255, 255, 0.01);
+      color: #666; }
+  .yellow a {
+    color: #666;
+    border-bottom: 1px solid #999;
+    border-top: 3px solid transparent; }
+    .yellow a:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border: 3px solid #999; }
 
 .green {
   background: -webkit-linear-gradient(237deg, #1c4729, #bedda9, #8fb4a2, #778868);
@@ -458,17 +461,20 @@ a.button {
     background-position: 100% 40%; }
   100% {
     background-position: 0% 61%; } }
-
-input[type="submit"],
-a.button {
-  background: #666;
-  color: #fff;
-  border: 3px solid #666; }
-  input[type="submit"]:hover,
-  input[type="submit"] a.button,
-  a.button:hover,
-  a.button a.button {
-    color: #666; }
+  .white input[type="submit"] {
+    background: #666;
+    color: #fff;
+    border: 3px solid #666; }
+    .white input[type="submit"]:hover {
+      background: rgba(255, 255, 255, 0.01);
+      color: #666; }
+  .white a {
+    color: #666;
+    border-bottom: 1px solid #999;
+    border-top: 3px solid transparent; }
+    .white a:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border: 3px solid #999; }
 
 body {
   font-family: 'Josefin Sans', sans-serif;
@@ -478,7 +484,8 @@ body {
   color: white;
   text-align: center;
   font-weight: 100;
-  text-shadow: 0px 0px 10px #fff; }
+  text-shadow: 0px 0px 10px #fff;
+  font-size: 16px; }
 
 body {
   background: -webkit-linear-gradient(280deg, #308a73, #6a576b, #b5afb0);
@@ -514,18 +521,19 @@ body {
     background-position: 0% 32%; } }
 
 h1 {
-  font-size: 30px;
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   display: block;
   margin: 0;
-  font-size: 20px; }
+  font-size: 20px;
+  line-height: 1.3em; }
 
 p {
   font-size: 1em;
   line-height: 1.3em;
-  max-width: 30em; }
+  max-width: 30em;
+  margin: 5px; }
 
 hr {
   background: white;
@@ -558,7 +566,7 @@ fieldset {
     text-align: center; }
 
 .prompt {
-  font-size: 30px;
+  font-size: 20px;
   max-width: 20em; }
 
 .selection p {
@@ -569,8 +577,7 @@ fieldset {
   width: 100%;
   margin-bottom: 50px; }
 
-input[type="submit"],
-a.button {
+input[type="submit"] {
   padding: 10px 30px;
   font-size: 20px;
   text-transform: uppercase;
@@ -584,16 +591,25 @@ a.button {
   margin: 20px;
   font-size: 1em;
   text-decoration: none; }
-  input[type="submit"]:hover,
-  input[type="submit"] a.button,
-  a.button:hover,
-  a.button a.button {
+  input[type="submit"]:hover {
     background: rgba(255, 255, 255, 0.01);
     color: #fff; }
 
-a.button {
-  margin-top: 3000px;
-  font-size: 12px; }
+a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-top: 50px;
+  border-bottom: 1px solid white;
+  border-top: 3px solid transparent;
+  border-radius: 2px;
+  -webkit-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s; }
+  a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border: 3px solid white;
+    padding: 10px 30px 8px; }
 
 input[type="radio"] {
   visibility: hidden;
@@ -639,3 +655,7 @@ section {
   align-items: center;
   width: 100%;
   height: 100%; }
+
+@media (max-width: 500px) {
+  body {
+    font-weight: 300; } }

@@ -37,16 +37,26 @@
             background-position: 0% 50%
         }
     }
-    color: rgb(78, 83, 99);
-}
-
-input[type="submit"],
-a.button {
-    background: #666;
-    color: #fff;
-    border: 3px solid #666;
-    &:hover,
-    a.button {
+    color: #666;
+    input[type="submit"],
+    {
+        background: #666;
+        color: #fff;
+        border: 3px solid #666;
+        &:hover,
+        {
+            background: rgba(255, 255, 255, 0.01);
+            color: #666;
+        }
+    }
+    a {
         color: #666;
+        border-bottom: 1px solid #999;
+        border-top: 3px solid rgba(0, 0, 0, 0);
+        &:hover,
+        {
+            background: rgba(255, 255, 255, 0.25);
+            border: 3px solid #999;
+        }
     }
 }
