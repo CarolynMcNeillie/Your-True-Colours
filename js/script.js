@@ -140,14 +140,14 @@ colours.clickFinish = function() {
         //Add a tweet button to colour name
         $('.twitter').html(colours.twitter[userAura]);
 
-        //Facebook share dialogue box
-        // document.getElementById('shareBtn').onclick = function() {
-        //     FB.ui({
-        //         method: 'share',
-        //         display: 'popup',
-        //         href: 'http://www.carolynmcneillie.com/colours',
-        //     }, function(response) {});
-        // }
+        // Facebook share dialogue box
+        document.getElementById('shareBtn').onclick = function() {
+            FB.ui({
+                method: 'share',
+                display: 'popup',
+                href: 'http://www.carolynmcneillie.com/colours',
+            }, function(response) {});
+        }
 
         $('.facebook').html(colours.facebook[userAura]);
     });
