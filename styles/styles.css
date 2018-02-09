@@ -682,12 +682,14 @@ a {
 
 input[type="radio"] {
   visibility: hidden;
-  position: absolute; }
+  position: absolute;
+  cursor: pointer; }
 
 label {
   margin: 0 auto;
   margin: 0;
-  font-size: 30px; }
+  font-size: 30px;
+  cursor: pointer; }
 
 .select {
   width: 100%;
