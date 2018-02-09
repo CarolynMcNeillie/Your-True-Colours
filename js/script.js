@@ -39,17 +39,6 @@ colours.start = function() {
     });
 }
 
-/////////////////////////////////////////////////
-//This controls the arrows I got rid of
-// colours.clickNext = function() {
-//     $('.next').on('click', function() {
-//         $(thisPrompt).removeClass('current');
-//         $(thisSelection).addClass('current');
-
-//     });
-// }
-/////////////////////////////////////////////////
-
 colours.collectUserInputRed = function() {
     $('.selection1 input').on('change', function(e) { //when a toggle is selected
         e.preventDefault(); //stops the page reloading
@@ -57,9 +46,6 @@ colours.collectUserInputRed = function() {
         let thisID = ((this).id); //gets the id of the selected radio input
         $(`label[for=${thisID}] span`).toggleClass('fa-circle-o fa-circle'); //changes the toggle icon
         console.log($(this).val());
-        //I need to work out how to tie this to the selected radio though!
-        // thisPrompt = '.secondPrompt'; // sets the stage for the arrows I got rid off
-        // thisSelection = '.secondSelection'; // sets the stage for the arrows I got rid off
         $('.firstPrompt').removeClass('current');
         $('.secondPrompt').addClass('current');
     });
@@ -140,18 +126,13 @@ colours.clickFinish = function() {
         //Add a tweet button to colour name
         $('.twitter').html(colours.twitter[userAura]);
 
-        // Facebook share dialogue box
-        document.getElementById('shareBtn').onclick = function() {
-            FB.ui({
-                method: 'share',
-                display: 'popup',
-                href: 'http://www.carolynmcneillie.com/colours',
-            }, function(response) {});
-        }
-
-        $('.facebook').html(colours.facebook[userAura]);
+        //Change the title and image metadata for Facebook Sharing
+        $('meta')[3].content = `images/${userAura}.jpg`
+        $('meta')[5].content = `My aura is ${userAura}. What's yours?`;
     });
 }
+
+
 
 colours.init = function() {
     colours.assignRandomValues(); //assign random 1 or 0 values to the user inputs
@@ -162,8 +143,6 @@ colours.init = function() {
     colours.collectUserInputBlue(); //listens for user input - blue
     colours.clickFinish(); //calculates final colour and displays on the screen
 }
-
-
 
 $(function() {
     colours.init();
