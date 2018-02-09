@@ -1,10 +1,10 @@
 colours.twitter = { //holds values for twitter share button
-    red: `<a href="#"><span class="fa fa-twitter"></span></a>`,
-    orange: `<a href="#"><span class="fa fa-twitter"></span></a>`,
-    yellow: `<a href="#"><span class="fa fa-twitter"></span></a>`,
-    green: `<a href="#"><span class="fa fa-twitter"></span></a>`,
-    blue: `<a href="#"><span class="fa fa-twitter"></span></a>`,
-    turquoise: `<a href="#"><span class="fa fa-twitter"></span></a>`,
-    purple: `<a href="#"><span class="fa fa-twitter"></span></a>`,
-    white: `<a href="#"><span class="fa fa-twitter"></span></a>`,
+    red: `<a href="http://twitter.com/home?status=My aura is red. What's yours? Find out here: http://www.carolynmcneillie.com/colours pic.twitter.com/4tymeg5VKq @carolynalive"><span class="fa fa-twitter"></span></a>`,
+    orange: `<a href="http://twitter.com/home?status=My aura is orange. What's yours? Find out here: http://www.carolynmcneillie.com/colours pic.twitter.com/yA2ROfxAXk @carolynalive"><span class="fa fa-twitter"></span></a>`,
+    yellow: `<a href="http://twitter.com/home?status=My aura is yellow. Discover yours here: http://www.carolynmcneillie.com/colours pic.twitter.com/R9NCGV4geO @carolynalive"><span class="fa fa-twitter"></span></a>`,
+    green: `<a href="http://twitter.com/home?status=My aura is green. Discover yours here: http://www.carolynmcneillie.com/colours pic.twitter.com/ODTDEzThAF @carolynalive"><span class="fa fa-twitter"></span></a>`,
+    blue: `<a href="http://twitter.com/home?status=My aura is blue. Discover yours here: http://www.carolynmcneillie.com/colours pic.twitter.com/wskvYQsBzw @carolynalive"><span class="fa fa-twitter"></span></a>`,
+    turquoise: `<a href="http://twitter.com/home?status=My aura is turquoise. Discover yours here: http://www.carolynmcneillie.com/colours pic.twitter.com/CXzA1uaZVw @carolynalive"><span class="fa fa-twitter"></span></a>`,
+    purple: `<a href="http://twitter.com/home?status=My aura is purple. Discover yours here: http://www.carolynmcneillie.com/colours pic.twitter.com/K9bOyZ5CXx @carolynalive"><span class="fa fa-twitter"></span></a>`,
+    white: `<a href="http://twitter.com/home?status=My aura is white. Discover yours here: http://www.carolynmcneillie.com/colours pic.twitter.com/gONLUTUAeM @carolynalive"><span class="fa fa-twitter"></span></a>`,
 }

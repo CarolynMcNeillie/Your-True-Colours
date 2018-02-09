@@ -276,7 +276,19 @@ input::-moz-focus-inner {
     border-top: 3px solid transparent; }
     .yellow a:hover {
       background: rgba(255, 255, 255, 0.25);
-      border: 3px solid #999; }
+      border: 3px solid #999;
+      padding: 10px 30px 8px; }
+  .yellow li a {
+    text-decoration: none;
+    border: 0; }
+    .yellow li a:hover {
+      color: rgba(0, 0, 0, 0.1);
+      border: 0;
+      text-shadow: 0;
+      background: 0; }
+      .yellow li a:hover:after {
+        color: #666;
+        text-shadow: 0px 0px 5px #fff; }
 
 .green {
   background: -webkit-linear-gradient(237deg, #1c4729, #bedda9, #8fb4a2, #778868);
@@ -467,7 +479,8 @@ input::-moz-focus-inner {
     border: 3px solid #666; }
     .white input[type="submit"]:hover {
       background: rgba(255, 255, 255, 0.01);
-      color: #666; }
+      color: #666;
+      padding: 10px 30px 8px; }
   .white a {
     color: #666;
     border-bottom: 1px solid #999;
@@ -475,6 +488,17 @@ input::-moz-focus-inner {
     .white a:hover {
       background: rgba(255, 255, 255, 0.25);
       border: 3px solid #999; }
+  .white li a {
+    text-decoration: none;
+    border: 0; }
+    .white li a:hover {
+      color: rgba(0, 0, 0, 0.1);
+      border: 0;
+      text-shadow: 0;
+      background: 0; }
+      .white li a:hover:after {
+        color: #666;
+        text-shadow: 0px 0px 5px #fff; }
 
 body {
   font-family: 'Josefin Sans', sans-serif;
@@ -526,7 +550,8 @@ h1 {
   display: block;
   margin: 0;
   font-size: 20px;
-  line-height: 1.3em; }
+  line-height: 1.3em;
+  weight: 100; }
 
 p {
   font-size: 1em;
@@ -609,8 +634,9 @@ li {
       color: rgba(225, 225, 225, 0); }
       li a:hover:after {
         content: "share";
+        weight: 300;
         color: white;
-        font-size: 12px;
+        font-size: 14px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         position: absolute;
