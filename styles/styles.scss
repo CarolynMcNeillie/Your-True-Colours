@@ -36,6 +36,18 @@ p {
     margin: 5px;
 }
 
+p.copyright {
+    margin-top: 35px;
+    font-size: 0.65em;
+    background: none;
+    a {
+        padding: 0;
+        background: none;
+        border: none;
+        text-decoration: underline;
+    }
+}
+
 hr {
     background: white;
     width: 50px;
@@ -73,6 +85,44 @@ fieldset {
     margin-bottom: 50px;
 }
 
+ul {
+    padding: 0;
+    margin-top: 30px;
+}
+
+li {
+    display: inline-block;
+    font-size: 30px;
+    position: relative;
+    width: 75px;
+    a {
+        text-decoration: none;
+        background: none;
+        border: 0;
+        padding: 0;
+        margin: 15px;
+        &:hover {
+            border: 0;
+            padding: 0;
+            margin: 30px;
+            background: 0;
+            color: rgba(225, 225, 225, 0);
+            &:after {
+                content: "share";
+                color: white;
+                font-size: 12px;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                position: absolute;
+                right: 50%;
+                top: 50%;
+                transform: translateX(50%) translateY(-50%);
+                text-shadow: 0px 0px 5px #333;
+            }
+        }
+    }
+}
+
 //buttons
 input[type="submit"],
 {
@@ -99,15 +149,13 @@ a {
     text-decoration: none;
     padding: 10px 30px;
     margin-top: 50px;
-    border-bottom: 1px solid white;
-    border-top: 3px solid rgba(0, 0, 0, 0);
+    background: rgba(225, 225, 225, 0.25);
+    border: 3px solid rgba(225, 225, 225, 0);
     border-radius: 2px;
-    transition: background-color 0.4s;
-    &:hover,
-    {
+    transition: border 0.4s;
+    &:hover {
         background: rgba(255, 255, 255, 0.25);
         border: 3px solid white;
-        padding: 10px 30px 8px;
     }
 }
 
@@ -130,15 +178,14 @@ label {
 }
 
 section {
-    visibility: hidden;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    max-width: 80%;
-}
-
-.current {
+    //     visibility: hidden;
+    //     position: absolute;
+    //     left: 50%;
+    //     top: 50%;
+    //     transform: translateX(-50%) translateY(-50%);
+    //     max-width: 80%;
+    // }
+    // .current {
     visibility: visible;
     display: flex;
     flex-direction: column;

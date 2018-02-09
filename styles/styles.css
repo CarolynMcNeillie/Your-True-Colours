@@ -534,6 +534,16 @@ p {
   max-width: 30em;
   margin: 5px; }
 
+p.copyright {
+  margin-top: 35px;
+  font-size: 0.65em;
+  background: none; }
+  p.copyright a {
+    padding: 0;
+    background: none;
+    border: none;
+    text-decoration: underline; }
+
 hr {
   background: white;
   width: 50px;
@@ -576,6 +586,41 @@ fieldset {
   width: 100%;
   margin-bottom: 50px; }
 
+ul {
+  padding: 0;
+  margin-top: 30px; }
+
+li {
+  display: inline-block;
+  font-size: 30px;
+  position: relative;
+  width: 75px; }
+  li a {
+    text-decoration: none;
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 15px; }
+    li a:hover {
+      border: 0;
+      padding: 0;
+      margin: 30px;
+      background: 0;
+      color: rgba(225, 225, 225, 0); }
+      li a:hover:after {
+        content: "share";
+        color: white;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        -webkit-transform: translateX(50%) translateY(-50%);
+        -ms-transform: translateX(50%) translateY(-50%);
+        transform: translateX(50%) translateY(-50%);
+        text-shadow: 0px 0px 5px #333; }
+
 input[type="submit"] {
   padding: 10px 30px;
   font-size: 20px;
@@ -599,16 +644,15 @@ a {
   text-decoration: none;
   padding: 10px 30px;
   margin-top: 50px;
-  border-bottom: 1px solid white;
-  border-top: 3px solid transparent;
+  background: rgba(225, 225, 225, 0.25);
+  border: 3px solid rgba(225, 225, 225, 0);
   border-radius: 2px;
-  -webkit-transition: background-color 0.4s;
-  -o-transition: background-color 0.4s;
-  transition: background-color 0.4s; }
+  -webkit-transition: border 0.4s;
+  -o-transition: border 0.4s;
+  transition: border 0.4s; }
   a:hover {
     background: rgba(255, 255, 255, 0.25);
-    border: 3px solid white;
-    padding: 10px 30px 8px; }
+    border: 3px solid white; }
 
 input[type="radio"] {
   visibility: hidden;
@@ -628,16 +672,6 @@ label {
   justify-content: space-around; }
 
 section {
-  visibility: hidden;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  max-width: 80%; }
-
-.current {
   visibility: visible;
   display: -webkit-box;
   display: -ms-flexbox;

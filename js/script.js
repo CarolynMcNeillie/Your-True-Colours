@@ -108,7 +108,7 @@ colours.clickFinish = function() {
         //if none selected = white
         //if the userColor = red || green || blue, done
         //if all selected = yellow
-        //if: red & green & blue = white
+        //if red & green & blue = white
         //if red & green = orange
         //if red & blue = purple
         //if green & blue = turquoise
@@ -133,21 +133,13 @@ colours.clickFinish = function() {
         $("body").addClass(`${userAura}`);
 
         // pull in the copy associated with the colour in question
-
-        $('.userAura').html(`<h1>${userAura}</h1>`);
-
-        $('.userAura').append(`<p>${colours.colourMeaning[userAura]}</p>`);
+        $('.colourName').text(userAura);
+        $('.colourMeaning').html(`<p>${colours.colourMeaning[userAura]}</p>`);
 
 
         //Add a tweet button to colour name
-        // $('.twitter').html(` < a href = "https://twitter.com/intent/tweet?button_hashtag=tweet&ref_src=twsrc%5Etfw"
-        // class = "twitter-hashtag-button"
-        // data - text = "My aura is ${userAura}. What is yours?"
-        // data - url = "https://carolynmcneillie.github.io/colours/"
-        // data - related = "carolynalive"
-        // data - lang = "en"
-        // data - show - count = "false" > Tweet# tweet < /a><script async src="https:/ / platform.twitter.com / widgets.js " charset="
-        // utf - 8 "></script>`);
+        $('.twitter').html(colours.twitter[userAura]);
+        $('.facebook').html(colours.facebook[userAura]);
     });
 }
 
