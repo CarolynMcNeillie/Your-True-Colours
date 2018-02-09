@@ -16,7 +16,7 @@ body {
     text-align: center;
     font-weight: 100;
     text-shadow: 0px 0px 10px #fff;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 @import "partials/gradiant_black";
@@ -25,9 +25,9 @@ h1 {
     letter-spacing: 0.1em;
     display: block;
     margin: 0;
-    font-size: 20px;
+    font-size: 1.5em;
     line-height: 1.3em;
-    weight: 100;
+    font-weight: 100;
 }
 
 p {
@@ -182,14 +182,15 @@ label {
 }
 
 section {
-    //     visibility: hidden;
-    //     position: absolute;
-    //     left: 50%;
-    //     top: 50%;
-    //     transform: translateX(-50%) translateY(-50%);
-    //     max-width: 80%;
-    // }
-    // .current {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 80%;
+}
+
+.current {
     visibility: visible;
     display: flex;
     flex-direction: column;
@@ -204,5 +205,3 @@ section {
         font-weight: 300;
     }
 }
-
-;
