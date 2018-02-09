@@ -632,7 +632,7 @@ input[type="submit"] {
   -o-transition: background-color 0.4s;
   transition: background-color 0.4s;
   border: 3px solid white;
-  margin: 20px;
+  margin: 40px 20px 20px;
   font-size: 1em;
   text-decoration: none; }
   input[type="submit"]:hover {
