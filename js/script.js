@@ -4,22 +4,17 @@ colours.userColours = { //holds inputs passed in from user
     green: '',
     blue: ''
 }
+
+//global variables
 const userAuraArray = []
 let userAura;
 
-
-/////////////////////////////////////////////////
-// this sets variables for the arrows I got rid of
-// let thisPrompt = '.firstPrompt';
-// let thisSelection = '.firstSelection';
-/////////////////////////////////////////////////
-
-
+//select and display three prompts from the array
 colours.assignPrompts = function() {
     for (let i = 1; i < 4; i = i + 1) {
         let randomVal = Math.floor(Math.random() * colours.prompts.length);
         $((`.prompts${i}`)).text(colours.prompts[randomVal]);
-        colours.prompts.splice([randomVal], 1);
+        colours.prompts.splice([randomVal], 1); //make sure the same one isn't displayed twice
 
     }
 }
@@ -29,7 +24,7 @@ colours.assignRandomValues = function() { //assigns value of 1 or 0 to each sele
         //Define a random 1 or 0 within the function
         let randomVal = Math.floor(Math.random() * 2);
         console.log(randomVal);
-        // //Set each input with the random value
+        // //Set the a random value on the 
         $(el).val(randomVal);
         //reset the toggle
         this.checked = false;
@@ -137,36 +132,37 @@ colours.clickFinish = function() {
         //change the color of the page 
         $("body").addClass(`${userAura}`);
 
-        //pull in the copy associated with the colour in question
-        $('.userAura').html(`<h1>${userAura}</h1><p>${colours.colourMeaning[userAura]}</p>`);
+        // pull in the copy associated with the colour in question
+
+        $('.userAura').html(`<h1>${userAura}</h1>`);
+
+        $('.userAura').append(`<p>${colours.colourMeaning[userAura]}</p>`);
+
+
+        //Add a tweet button to colour name
+        // $('.twitter').html(` < a href = "https://twitter.com/intent/tweet?button_hashtag=tweet&ref_src=twsrc%5Etfw"
+        // class = "twitter-hashtag-button"
+        // data - text = "My aura is ${userAura}. What is yours?"
+        // data - url = "https://carolynmcneillie.github.io/colours/"
+        // data - related = "carolynalive"
+        // data - lang = "en"
+        // data - show - count = "false" > Tweet# tweet < /a><script async src="https:/ / platform.twitter.com / widgets.js " charset="
+        // utf - 8 "></script>`);
     });
 }
 
 colours.init = function() {
-    colours.assignRandomValues();
-    colours.start();
-    colours.assignPrompts();
-    colours.collectUserInputRed();
-    colours.collectUserInputGreen();
-    colours.collectUserInputBlue();
-    colours.clickFinish();
+    colours.assignRandomValues(); //assign random 1 or 0 values to the user inputs
+    colours.assignPrompts(); //select and display three prompts from the array
+    colours.start(); //listens for user click on start button
+    colours.collectUserInputRed(); //listens for user input - red
+    colours.collectUserInputGreen(); //listens for user input - green
+    colours.collectUserInputBlue(); //listens for user input - blue
+    colours.clickFinish(); //calculates final colour and displays on the screen
 }
 
 
 
 $(function() {
-
     colours.init();
-
-
-
-    // print color to the screen
-    // change background colour to gradient corresponding to the aura colour
-    // print corrosponding fortune to screen
-
-    //////pull a random corrosponding forunte and print to the screen
-
-    // allow the user to share on twitter
-
-
 });
