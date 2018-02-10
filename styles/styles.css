@@ -522,7 +522,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   display: block;
-  margin: 0;
+  margin: 0 auto;
   font-size: 1.5em;
   line-height: 1.3em;
   font-weight: 100; }
@@ -531,7 +531,8 @@ p {
   font-size: 1em;
   line-height: 1.3em;
   max-width: 30em;
-  margin: 5px; }
+  margin: 5px;
+  text-align: center; }
 
 p.copyright {
   margin-top: 35px;
@@ -546,7 +547,7 @@ p.copyright {
 hr {
   background: white;
   width: 50px;
-  margin: 20px;
+  margin: 20px auto;
   height: 1px;
   border: 0;
   -webkit-box-shadow: 0 0 10px white;
@@ -554,7 +555,6 @@ hr {
 
 fieldset {
   border: 0;
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -568,10 +568,9 @@ fieldset {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 30px;
-  text-align: center; }
+  margin: 30px; }
   fieldset p {
-    text-align: center; }
+    font-size: 0.8em; }
 
 .prompt {
   font-size: 20px;
@@ -639,6 +638,9 @@ input[type="submit"] {
   input[type="submit"]:hover {
     background: rgba(255, 255, 255, 0.01);
     color: #fff; }
+  input[type="submit"]:active {
+    background: #fff;
+    color: #333; }
 
 a {
   color: white;
@@ -665,6 +667,8 @@ label {
   margin: 0;
   font-size: 30px;
   cursor: pointer; }
+  label:hover {
+    text-shadow: 0 0 25px; }
 
 .select {
   width: 100%;
@@ -675,7 +679,7 @@ label {
   justify-content: space-around; }
 
 section {
-  visibility: hidden;
+  display: none;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -684,9 +688,7 @@ section {
   transform: translateX(-50%) translateY(-50%);
   max-width: 80%; }
 
-.current {
-  opacity: 0;
-  visibility: visible;
+.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

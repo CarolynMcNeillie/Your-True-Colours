@@ -40,6 +40,7 @@ colours.start = function() {
     $('#start').on('click', function() {
         $('.current').fadeOut(600, function() {
             $('.title').removeClass('current');
+            $('.firstPrompt').fadeIn(2000);
             $('.firstPrompt').addClass('current');
         });
     });
@@ -52,8 +53,11 @@ colours.collectUserInputRed = function() {
         let thisID = ((this).id); //gets the id of the selected radio input
         $(`label[for=${thisID}] span`).toggleClass('fa-circle-o fa-circle'); //changes the toggle icon
         console.log($(this).val());
-        $('.firstPrompt').removeClass('current');
-        $('.secondPrompt').addClass('current');
+        $('.firstPrompt').fadeOut(600, function() {
+            $('.firstPrompt').removeClass('current');
+            $('.secondPrompt').fadeIn(2000);
+            $('.secondPrompt').addClass('current');
+        });
     });
 }
 
@@ -66,8 +70,12 @@ colours.collectUserInputGreen = function() {
         console.log($(this).val());
         // thisPrompt = '.secondPrompt'; // sets the stage for the arrows I got rid off
         // thisSelection = '.thirdelection'; // sets the stage for the arrows I got rid off
-        $('.secondPrompt').removeClass('current');
-        $('.thirdPrompt').addClass('current');
+        $('.secondPrompt').fadeOut(600, function() {
+            $('.secondPrompt').removeClass('current');
+            $('.thirdPrompt').fadeIn(2000);
+            $('.thirdPrompt').addClass('current');
+        });
+
     });
 }
 
@@ -78,8 +86,12 @@ colours.collectUserInputBlue = function() {
         let thisID = ((this).id);
         $(`label[for=${thisID}] span`).toggleClass('fa-circle-o fa-circle');
         console.log($(this).val());
-        $('.thirdPrompt').removeClass('current');
-        $('.lastInput').addClass('current');
+
+        $('.thirdPrompt').fadeOut(600, function() {
+            $('.thirdPrompt').removeClass('current');
+            $('.lastInput').fadeIn(2000);
+            $('.lastInput').addClass('current');
+        });
     });
 }
 
@@ -92,8 +104,11 @@ colours.clickFinish = function() {
                 userAuraArray.push(colour); //create an array that only holds colours with value of 1
             }
 
-            $('.lastInput').removeClass('current');
-            $('.aura').addClass('current');
+            $('.lastInput').fadeOut(600, function() {
+                $('.lastInput').removeClass('current');
+                $('.aura').fadeIn(2000);
+                $('.aura').addClass('current');
+            });
         }
 
         //Determine the final shade and store it in userAura
@@ -141,6 +156,7 @@ colours.clickFinish = function() {
 
 
 colours.init = function() {
+    $('.title').fadeIn(2000);
     colours.assignRandomValues(); //assign random 1 or 0 values to the user inputs
     colours.assignPrompts(); //select and display three prompts from the array
     colours.start(); //listens for user click on start button
