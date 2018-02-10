@@ -578,7 +578,6 @@ fieldset {
   max-width: 20em; }
 
 .selection p {
-  font-size: 0.75em;
   line-height: 1.5em;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -603,7 +602,6 @@ li {
     li a:hover {
       border: 0;
       padding: 0;
-      margin: 30px;
       background: 0;
       color: rgba(225, 225, 225, 0); }
       li a:hover:after {
@@ -620,6 +618,9 @@ li {
         -ms-transform: translateX(50%) translateY(-50%);
         transform: translateX(50%) translateY(-50%);
         text-shadow: 0px 0px 5px #333; }
+
+li.twitter a:hover:after {
+  content: "tweet"; }
 
 input[type="submit"] {
   padding: 10px 30px;
@@ -703,4 +704,15 @@ section {
 
 @media (max-width: 500px) {
   body {
-    font-weight: 300; } }
+    font-weight: 300;
+    font-size: 16px; }
+  ul.share {
+    margin: 20px 0 0; }
+  li {
+    margin: 10px;
+    padding: 0 10px;
+    width: 45px; }
+    li a {
+      margin: 0; }
+  a {
+    margin-top: 20px; } }
