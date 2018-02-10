@@ -1,3 +1,7 @@
+// MAYBE I CAN USE
+// $('.current').fadeOut();
+//I think we need to fadeIn current on load. Currently .current is set opacity 0 to try to set up for this
+
 // CONSTANTS
 colours.userColours = { //holds inputs passed in from user
     red: '',
@@ -34,8 +38,10 @@ colours.assignRandomValues = function() { //assigns value of 1 or 0 to each sele
 colours.start = function() {
     //When the user clicks "Start" show the first prompt 
     $('#start').on('click', function() {
-        $('.title').removeClass('current');
-        $('.firstPrompt').addClass('current');
+        $('.current').fadeOut(600, function() {
+            $('.title').removeClass('current');
+            $('.firstPrompt').addClass('current');
+        });
     });
 }
 

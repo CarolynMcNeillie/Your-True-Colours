@@ -685,6 +685,7 @@ section {
   max-width: 80%; }
 
 .current {
+  opacity: 0;
   visibility: visible;
   display: -webkit-box;
   display: -ms-flexbox;

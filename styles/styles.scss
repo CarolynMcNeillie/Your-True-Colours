@@ -200,6 +200,7 @@ section {
 }
 
 .current {
+    opacity: 0;
     visibility: visible;
     display: flex;
     flex-direction: column;
