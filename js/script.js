@@ -38,6 +38,7 @@ colours.assignRandomValues = function() { //assigns value of 1 or 0 to each sele
 colours.start = function() {
     //When the user clicks "Start" show the first prompt 
     $('#start').on('click', function() {
+        $('#start').css('opacity', '0');
         $('.current').fadeOut(600, function() {
             $('.title').removeClass('current');
             $('.firstPrompt').fadeIn(2000);
@@ -104,11 +105,6 @@ colours.clickFinish = function() {
                 userAuraArray.push(colour); //create an array that only holds colours with value of 1
             }
 
-            $('.lastInput').fadeOut(600, function() {
-                $('.lastInput').removeClass('current');
-                $('.aura').fadeIn(2000);
-                $('.aura').addClass('current');
-            });
         }
 
         //Determine the final shade and store it in userAura
@@ -136,8 +132,14 @@ colours.clickFinish = function() {
             console.log('Error in converting the userAuraArray to a final colour userAura!')
         }
 
-        //change the color of the page 
+        $('.lastInput').hide();
+        $('.lastInput').removeClass('current');
         $("body").addClass(`${userAura}`);
+        $('.aura').fadeIn(2000);
+        $('.aura').addClass('current');
+
+
+        //change the color of the page 
 
         // pull in the copy associated with the colour in question
         $('.colourName').text(userAura);

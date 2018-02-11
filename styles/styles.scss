@@ -34,7 +34,7 @@ p {
     font-size: 1em;
     line-height: 1.3em;
     max-width: 30em;
-    margin: 5px;
+    margin: 5px auto;
     text-align: center;
 }
 
@@ -74,6 +74,7 @@ fieldset {
 .prompt {
     font-size: 20px;
     max-width: 20em;
+    width: 100%;
 }
 
 .selection p {
