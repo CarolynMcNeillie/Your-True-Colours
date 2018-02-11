@@ -1,10 +1,10 @@
 colours.twitter = { //holds values for twitter share button
-    red: `<a href="http://twitter.com/home?status=My aura is red. What's yours? Find out here: http://www.carolynmcneillie.com/colours pic.twitter.com/4tymeg5VKq @carolynalive"><span class="fa fa-twitter"></span></a>`,
-    orange: `<a href="http://twitter.com/home?status=My aura is orange. What's yours? Find out here: http://www.carolynmcneillie.com/colours pic.twitter.com/yA2ROfxAXk @carolynalive"><span class="fa fa-twitter"></span></a>`,
-    yellow: `<a href="http://twitter.com/home?status=My aura is yellow. Discover yours here: http://www.carolynmcneillie.com/colours pic.twitter.com/R9NCGV4geO @carolynalive"><span class="fa fa-twitter"></span></a>`,
-    green: `<a href="http://twitter.com/home?status=My aura is green. Discover yours here: http://www.carolynmcneillie.com/colours pic.twitter.com/ODTDEzThAF @carolynalive"><span class="fa fa-twitter"></span></a>`,
-    blue: `<a href="http://twitter.com/home?status=My aura is blue. Discover yours here: http://www.carolynmcneillie.com/colours pic.twitter.com/wskvYQsBzw @carolynalive"><span class="fa fa-twitter"></span></a>`,
-    turquoise: `<a href="http://twitter.com/home?status=My aura is turquoise. Discover yours here: http://www.carolynmcneillie.com/colours pic.twitter.com/CXzA1uaZVw @carolynalive"><span class="fa fa-twitter"></span></a>`,
-    purple: `<a href="http://twitter.com/home?status=My aura is purple. Discover yours here: http://www.carolynmcneillie.com/colours pic.twitter.com/K9bOyZ5CXx @carolynalive"><span class="fa fa-twitter"></span></a>`,
-    white: `<a href="http://twitter.com/home?status=My aura is white. Discover yours here: http://www.carolynmcneillie.com/colours pic.twitter.com/gONLUTUAeM @carolynalive"><span class="fa fa-twitter"></span></a>`,
+    red: `<a href="https://twitter.com/intent/tweet?text=My%20aura%20is%20red.%20Discover%20your%20aura%20at%20http://www.carolynmcneillie.com/colours%20pic.twitter.com/LsRIoIwNwc%20@carolynalive"><span class="fa fa-twitter"></span></a>`,
+    orange: `<a href="https://twitter.com/intent/tweet?text=My%20aura%20is%20orange.%20Discover%20your%20aura%20at%20http://www.carolynmcneillie.com/colours%20pic.twitter.com/QjX2TmszBs%20@carolynalive"><span class="fa fa-twitter"></span></a>`,
+    yellow: `<a href="https://twitter.com/intent/tweet?text=My%20aura%20is%20yellow.%20Discover%20your%20aura%20at%20http://www.carolynmcneillie.com/colours%20pic.twitter.com/gC7Q1JasuB%20@carolynalive"><span class="fa fa-twitter"></span></a>`,
+    green: `<a href="https://twitter.com/intent/tweet?text=My%20aura%20is%20green.%20Discover%20your%20aura%20at%20http://www.carolynmcneillie.com/colours%20pic.twitter.com/VVSW077KeS%20@carolynalive"><span class="fa fa-twitter"></span></a>`,
+    turquoise: `<a href="https://twitter.com/intent/tweet?text=My%20aura%20is%20turquoise.%20Discover%20your%20aura%20at%20http://www.carolynmcneillie.com/colours%20pic.twitter.com/xquJo2Bguo%20@carolynalive"><span class="fa fa-twitter"></span></a>`,
+    blue: `<a href="https://twitter.com/intent/tweet?text=My%20aura%20is%20blue.%20Discover%20your%20aura%20at%20http://www.carolynmcneillie.com/colours%20pic.twitter.com/E3SdsiIqPr%20@carolynalive"><span class="fa fa-twitter"></span></a>`,
+    purple: `<a href="https://twitter.com/intent/tweet?text=My%20aura%20is%20purple.%20Discover%20your%20aura%20at%20http://www.carolynmcneillie.com/colours%20pic.twitter.com/QXHwHt5FDR%20@carolynalive"><span class="fa fa-twitter"></span></a>`,
+    white: `<a href="https://twitter.com/intent/tweet?text=My%20aura%20is%20white.%20Discover%20your%20aura%20at%20http://www.carolynmcneillie.com/colours%20pic.twitter.com/GUiMBELTqK%20@carolynalive"><span class="fa fa-twitter"></span></a>`,
 }

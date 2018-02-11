@@ -39,7 +39,7 @@ colours.start = function() {
     //When the user clicks "Start" show the first prompt 
     $('#start').on('click', function() {
         $('#start').css('opacity', '0');
-        $('.current').fadeOut(600, function() {
+        $('.current').fadeOut(400, function() {
             $('.title').removeClass('current');
             $('.firstPrompt').fadeIn(2000);
             $('.firstPrompt').addClass('current');
