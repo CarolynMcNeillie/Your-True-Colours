@@ -6,4 +6,4 @@ colours.facebook = { //holds values for facebook share button
     turquoise: `<a href="#"><span class="fa fa-facebook"></span></a>`,
     purple: `<a href="#"><span class="fa fa-facebook"></span></a>`,
     white: `<a href="#"><span class="fa fa-facebook"></span></a>`,
-}
+};
