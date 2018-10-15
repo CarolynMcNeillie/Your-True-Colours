@@ -25,4 +25,4 @@ colours.prompts = [
     `Think of something that makes you smile.`,
     `Think of someone who makes you smile.`,
     `What is your favourite season?`,
-]
+];
