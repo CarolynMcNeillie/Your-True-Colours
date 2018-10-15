@@ -7,10 +7,10 @@ colours.userColours = { //holds inputs passed in from user
     red: '',
     green: '',
     blue: ''
-}
+};
 
 //global variables
-const userAuraArray = []
+const userAuraArray = [];
 let userAura;
 
 //select and display three prompts from the array
@@ -21,7 +21,7 @@ colours.assignPrompts = function() {
         colours.prompts.splice([randomVal], 1); //make sure the same one isn't displayed twice
 
     }
-}
+};
 
 colours.assignRandomValues = function() { //assigns value of 1 or 0 to each select input on page
     $('body').find('input[type="radio"]').each(function(i, el) {
@@ -33,7 +33,7 @@ colours.assignRandomValues = function() { //assigns value of 1 or 0 to each sele
         //reset the toggle
         this.checked = false;
     });
-}
+};
 
 colours.start = function() {
     //When the user clicks "Start" show the first prompt 
@@ -45,7 +45,7 @@ colours.start = function() {
             $('.firstPrompt').addClass('current');
         });
     });
-}
+};
 
 colours.collectUserInputRed = function() {
     $('.selection1 input').on('change', function(e) { //when a toggle is selected
@@ -60,7 +60,7 @@ colours.collectUserInputRed = function() {
             $('.secondPrompt').addClass('current');
         });
     });
-}
+};
 
 colours.collectUserInputGreen = function() {
     $('.selection2 input').on('change', function(e) {
@@ -78,7 +78,7 @@ colours.collectUserInputGreen = function() {
         });
 
     });
-}
+};
 
 colours.collectUserInputBlue = function() {
     $('.selection3 input').on('change', function(e) {
@@ -94,7 +94,7 @@ colours.collectUserInputBlue = function() {
             $('.lastInput').addClass('current');
         });
     });
-}
+};
 
 colours.clickFinish = function() {
     $('input#finish').on('click', function() { //when the Finish button is clicked
@@ -153,7 +153,7 @@ colours.clickFinish = function() {
         $('meta')[3].content = `images/${userAura}.jpg`
         $('meta')[5].content = `My aura is ${userAura}. What's yours?`;
     });
-}
+};
 
 
 
@@ -166,7 +166,7 @@ colours.init = function() {
     colours.collectUserInputGreen(); //listens for user input - green
     colours.collectUserInputBlue(); //listens for user input - blue
     colours.clickFinish(); //calculates final colour and displays on the screen
-}
+};
 
 $(function() {
     colours.init();
